@@ -113,11 +113,12 @@ export async function GET(request: NextRequest) {
         }
 
         return {
+          id: `${getStockId(casa)}_${fechaActualizacion}`,
           value_avg: (compra + venta) / 2,
           value_sell: venta,
           value_buy: compra,
           stock_id: getStockId(casa),
-          date: new Date(fechaActualizacion),
+          date: new Date(),
         }
       }),
     })
