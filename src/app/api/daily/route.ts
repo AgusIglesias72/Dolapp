@@ -118,7 +118,7 @@ export async function GET(request: NextRequest) {
           value_sell: venta,
           value_buy: compra,
           stock_id: getStockId(casa),
-          date: new Date(),
+          date: new Date(fechaActualizacion),
         }
       }),
     })
