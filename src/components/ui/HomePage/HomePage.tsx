@@ -28,6 +28,7 @@ export default async function HomePage() {
       Hola. Soy la página de inicio. Probando Deploysa
       {dollarQuotation.map((dq) => (
         <QuoteCard
+          key={dq.stock_id}
           stock_id={dq.stock_id}
           date={dq.date.toLocaleDateString()}
           value_buy={dq.value_buy}
