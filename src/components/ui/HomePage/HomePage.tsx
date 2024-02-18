@@ -25,7 +25,7 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen w-full ">
-      Hola. Soy la página de inicio. Probando Deploy
+      Hola. Soy la página de inicio. Probando Deploys
       {dollarQuotation.map((dq) => (
         <QuoteCard
           stock_id={dq.stock_id}
