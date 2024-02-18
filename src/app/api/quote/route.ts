@@ -3,7 +3,7 @@ import client from '@/lib/prisma'
 
 export const dynamic = 'force-dynamic' // defaults to force-static
 
-export async function GET(request: NextRequest) {
+export async function POST(request: NextRequest) {
   try {
     const URL_FETCH = 'https://dolarapi.com/v1/dolares'
 
