@@ -67,9 +67,22 @@ model Stock {
   sku String? // stock, crypto, etc
   
   quotations DailyDollarQuotation[] 
+  dollarQuotations DollarQuotation[]
 }
 
 model DailyDollarQuotation {
+  id        String   @id @default(cuid())
+  stock_id String
+  date      DateTime
+  value_buy Float
+  value_sell Float
+  value_avg Float
+  created_at DateTime @default(now())
+
+  stock Stock @relation(fields: [stock_id], references: [ticker], onDelete: Cascade)
+}
+
+model DollarQuotation {
   id        String   @id @default(cuid())
   stock_id String
   date      DateTime
